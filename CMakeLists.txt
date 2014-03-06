@@ -4,8 +4,8 @@ FIND_PACKAGE(PythonLibs)
 FIND_PACKAGE(Boost COMPONENTS python)
 
 ENABLE_TESTING()
-INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
-LINK_LIBRARIES(${Boost_LIBRARIES}) # Deprecated but so convenient!
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS} "/usr/include/python2.7")
+LINK_LIBRARIES(${Boost_LIBRARIES} python2.7) # Deprecated but so convenient!
 
 ADD_SUBDIRECTORY(01-HelloWorld)
 ADD_SUBDIRECTORY(02-ExposingClasses)
